@@ -1,0 +1,96 @@
+RomFS:
+  Path: "romfs"
+  Ignore: "true"
+
+TitleInfo:
+  SaveDataSize: 0x100000
+  ProductCode: "CTR-P-SPOT"
+  ContentIndex: 0
+  UniqueId: 0x12345
+  Category: "Application"
+
+CardInfo:
+  MediaSize: 128MB
+  UseOnSD: true
+
+CommonHeaderFlags: 0x2
+
+AccessControlInfo:
+  UseExtSaveData: true
+  UseExtendedSaveDataAccessControl: true
+  FileSystemAccess:
+    - CategorySystemApplication
+    - CategoryHardwareCheck
+    - CategoryFileSystemTool
+    - Debug
+    - TwlCardBackup
+    - TwlNandData
+    - DemoExecution
+  IdealProcessor: 1
+  AffinityMask: 3
+  Priority: 16
+  MaxCpu: 80
+  StackSize: 0x10000
+  CoreVersion: 2
+  DescVersion: 2
+  ReleaseKernelMajor: 2
+  ReleaseKernelMinor: 44
+  MatchMakerId: 0
+  ThroughputId: 0
+  ServiceAccessControl:
+    - cfg
+    - dlp
+    - dsp
+    - frd
+    - fs
+    - gsplp
+    - hid
+    - http
+    - ir
+    - ldr_ro
+    - mic
+    - ndm
+    - news
+    - nfc
+    - nim
+    - nwm
+    - pdn
+    - ps
+    - ptm
+    - pxi
+    - socket
+    - spl
+    - ssl
+    - y2r
+
+SystemControlInfo:
+  SaveDataSize: 0x100000
+  RemasterVersion: 0
+  StackSize: 0x10000
+  ProcessIdType: 32Bit
+  Dependency:
+    ac: "000004013000080f"
+    am: "0000040130008802"
+    codec: "0000040130000802"
+    dlplay: "000004013000080d"
+    dlp: "0000040130008760"
+    gpio: "0000040130008168"
+    gsp: "0000040130008002"
+    hid: "0000040130008274"
+    http: "0000040130008283"
+    ir: "000004013000808d"
+    mcu: "0000040130008000"
+    mic: "0000040130008105"
+    ndm: "0000040130008012"
+    news: "0000040130008160"
+    nfc: "000004013000080f"
+    nim: "000004013000080b"
+    nwm: "0000040130008180"
+    pdn: "0000040130008003"
+    ps: "0000040130008004"
+    ptm: "000004013000080a"
+    pxi: "0000040130008009"
+    socket: "0000040130008017"
+    spl: "0000040130008006"
+    ssl: "000004013000080e"
+    y2r: "000004013000080c"

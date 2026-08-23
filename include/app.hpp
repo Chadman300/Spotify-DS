@@ -19,6 +19,8 @@ private:
     void refreshNowPlaying();
     void runSearch();
     void signIn();
+    void scanSignInCode();
+    void pasteSignInCode();
     void moveSelection(int delta);
     std::string friendlyError(const std::string& error) const;
     void render() const;

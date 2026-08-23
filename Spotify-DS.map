@@ -1,0 +1,10 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/armv6k/fpu\libgcc.a(_sync_dmb.o)
+                              (__sync_synchronize_dmb)
+C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu\libg.a(libc_a-exit.o)
+                              C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu/3dsx_crt0.o (exit)
+C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu\libg.a(libc_a-fini.o)
+                              C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu\libg.a(libc_a-exit.o) (__libc_fini_array)
+C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu\libsysbase.a(libsysbase_libsysbase_a-_exit.o)
+                              C:/devkitPro/devkitARM/bin/../lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/armv6k/fpu\libg.a(libc_a-exit.o) (_exit)

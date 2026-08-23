@@ -3,6 +3,7 @@
 #include <3ds.h>
 
 #include <array>
+#include <chrono>
 #include <cstdint>
 #include <cstring>
 #include <random>
@@ -161,7 +162,9 @@ std::string urlEncode(const std::string& input) {
 }
 
 std::string generateVerifier(size_t length) {
-    std::mt19937 rng(static_cast<uint32_t>(svcGetSystemTick()));
+    const uint32_t seed = static_cast<uint32_t>(
+        std::chrono::steady_clock::now().time_since_epoch().count() ^ 0x9E3779B9u);
+    std::mt19937 rng(seed);
     std::uniform_int_distribution<size_t> distribution(0, sizeof(kUnreserved) - 2);
 
     std::string verifier;
@@ -204,14 +207,6 @@ std::string SpotifyAuth::buildTokenExchangeBody(const SpotifyAuthRequest& reques
     body += "&code=" + urlEncode(code);
     body += "&redirect_uri=" + urlEncode(request.redirectUri);
     body += "&code_verifier=" + urlEncode(request.codeVerifier);
-    return body;
-}
-
-std::string SpotifyAuth::buildRefreshBody(const SpotifyAuthRequest& request, const std::string& refreshToken) {
-    std::string body;
-    body += "grant_type=refresh_token";
-    body += "&client_id=" + urlEncode(request.clientId);
-    body += "&refresh_token=" + urlEncode(refreshToken);
     return body;
 }
 
